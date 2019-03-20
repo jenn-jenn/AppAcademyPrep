@@ -87,6 +87,11 @@ numbers.each_with_index do |number, index|
   end
 end
 
+## Iterating with times : repeats a code for several times
+5.times do
+  puts 'King of the streets; child at play'
+end
+
 ## Range : from small to large values
 (1..10)
 ## this represents # from 1 through 19
