@@ -51,3 +51,24 @@ def bubbleSort(arr)
 end
 
 bubbleSort([14, 33, 27, 35, 10])
+
+# Write a method substrings that will take a String and return an array containing each of its substrings.
+# Example output: substrings("cat") => ["c", "ca", "cat", "a", "at", "t"]
+
+def substrings(string)
+  i = 0
+  substring = []
+  while i < string.length
+    str = ""
+    j = i
+    while j < string.length
+      str = str + string[j]
+      substring << str
+      j += 1
+    end
+    i += 1
+  end
+  return substring
+end
+
+substrings("bird")
