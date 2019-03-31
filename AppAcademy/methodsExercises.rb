@@ -20,17 +20,25 @@ rps("rock")
 #Implement a Swingers game. The method swingers should take an array of couple arrays and return the same type of data structure, with the couples mixed up. Assume that the first item in the couple array is a man, and the second item is a woman. Don’t pair a person with someone of their own gender (sorry to ruin your fun)
 
 def swingers(couples)
+
   men = []
   women = []
-  pair = []
   newCouples = []
-
-  couples.each do |couple|
-    men << couple[0]
-    women << couple[1]
+  couples.each do |pair|
+    men << pair[0]
+    women << pair[1]
   end
-
-
+  i = 2
+  men.each do |male|
+    index = rand(0..i)
+    pair = []
+    pair << male
+    pair << women[index]
+    women.delete_at(index)
+    i -= 1
+    newCouples << pair
+  end
+  return newCouples
 end
 
 swingers([
